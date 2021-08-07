@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Baptist West</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    
+    
+</head>
+<body>
+  
+    <div class="hero">
+      <div class="menu" id="menubutton">
+        <a href="#" class="menulink" id="menubutton1">Menu</a>
+      </div>
+      <div class="mobilemenu" id="mobilemenu">
+        <a href="#" class="mobilelink">Home</a>
+        <a href="#" class="mobilelink">Who We Are</a>
+        <a href="#" class="mobilelink">Ministries</a>
+        <a href="#" class="mobilelink">Give</a>
+        <a href="#" class="mobilelink">Contact</a>
+      </div>
+      <div class="navcontainer">
+        <a href="" class="sidelink">Home</a>
+        <a href="" class="sidelink">Who We Are</a>
+        <a href="" class="sidelink">Ministries</a>
+        <a href="" class="sidelink">Give</a>
+        <a href="" class="sidelink">Contact</a>
+      </div>
+      <img src="churchlogo1.svg" alt="" class="logo">
+      <div class="maincontent">
+        <div class="textcontainer">
+          <h1>Love God  Love People</h1>
+          <h2>SEE LIVES CHANGE</h2>
+        </div>
+        <div class="btncontainer">
+          <a href="#" class="btn1">Happenings?</a>
+          <a href="#" class="btn2">Watch Live</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="about">
+        <h1>-Our Story-</h1>
+        <p>In 1954 First Baptist West, known then as Brockland Mission, was formed. On February 25, 1968, Brockland Mission changed its name to First Baptist West and became a satellite church of First Baptist Church with a goal of reaching the growing number of people on the west side of Lawton. Our congregation worshiped in a building located at 61st and Ferris. In 1973 First Baptist West was constituted into a church and thus became an independent church and moved to the current location in 1982. In October of 2014, we dedicated a new wing of our building which doubled our space. FBW now strives to reach and disciple those whom Jesus died to save.</p>
+
+    </div>
+
+    <div class="latest">
+      <div class="latesttxtcontainer">
+        <h1>The Latest</h1>
+      </div>
+      <div class="videocontainer">
+        <iframe class="video" width="760" height="515" src="https://www.youtube.com/embed/7YFRBpIMAjw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      </div>
+        
+        
+    </div>
+
+    <div class="events">
+        
+
+        <div class="slidecontainer">
+            <i class="fas fa-chevron-left arrowleft" id="prev"></i>
+            <i class="fas fa-chevron-right arrowright" id="next"></i>
+            
+            
+            <div class="slides">
+               
+                <div class="slide">
+                    <h1>Christmas in <br>July-ish</h1>
+                    <h2>Saturday, August 7th @ 9:00am</h2>
+                    <a href="christmasinjulyish.html">Learn More</a>
+                </div>
+                <div class="slide current">
+                    <h1>Kids for Christ Basketball Camp</h1>
+                    <h2>Starts Next Week </h2>
+                    <a href="#">Register</a>
+                </div>
+                <div class="slide">
+                    <h1>Use the Church Center App</h1>
+                    <h2>Start new </h2>
+                    <a href="#">Try it free</a>
+                </div>
+                <div class="slide">
+                  <h1>FBW Sports Camp 2021</h1>
+                  <h2>August 2-4 9:00 am - Noon </h2>
+                  <a href="https://firstbaptistwest.churchcenter.com/registrations/events/922293">Register</a>
+              </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <script>
+      var menubtn = document.getElementById("menubutton1");
+      var mobilemenu = document.getElementById("mobilemenu");
+      mobilemenu.style.top = "-100vh";
+      menubtn.onclick = function () {
+        if(mobilemenu.style.top == "-100vh") {
+          mobilemenu.style.top = "0";
+        }
+        else{
+          mobilemenu.style.top = "-100vh";
+        }
+      }
+    </script>
+    <script>
+        const slides = document.querySelectorAll('.slide');
+const next = document.querySelector('#next');
+const prev = document.querySelector('#prev');
+const auto = false; // Auto scroll
+const intervalTime = 5000;
+let slideInterval;
+
+const nextSlide = () => {
+  // Get current class
+  const current = document.querySelector('.current');
+  // Remove current class
+  current.classList.remove('current');
+  // Check for next slide
+  if (current.nextElementSibling) {
+    // Add current to next sibling
+    current.nextElementSibling.classList.add('current');
+  } else {
+    // Add current to start
+    slides[0].classList.add('current');
+  }
+  setTimeout(() => current.classList.remove('current'));
+};
+
+const prevSlide = () => {
+  // Get current class
+  const current = document.querySelector('.current');
+  // Remove current class
+  current.classList.remove('current');
+  // Check for prev slide
+  if (current.previousElementSibling) {
+    // Add current to prev sibling
+    current.previousElementSibling.classList.add('current');
+  } else {
+    // Add current to last
+    slides[slides.length - 1].classList.add('current');
+  }
+  setTimeout(() => current.classList.remove('current'));
+};
+
+// Button events
+next.addEventListener('click', e => {
+  nextSlide();
+  if (auto) {
+    clearInterval(slideInterval);
+    slideInterval = setInterval(nextSlide, intervalTime);
+  }
+});
+
+prev.addEventListener('click', e => {
+  prevSlide();
+  if (auto) {
+    clearInterval(slideInterval);
+    slideInterval = setInterval(nextSlide, intervalTime);
+  }
+});
+
+// Auto slide
+if (auto) {
+  // Run next slide at interval time
+  slideInterval = setInterval(nextSlide, intervalTime);
+}
+
+
+    </script>
+
+    
+   
+    
+</body>
+</html>

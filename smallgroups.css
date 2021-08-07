@@ -1,0 +1,102 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.header{
+    height: 350px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.466),rgba(0, 0, 0, 0.644)), url(Sanctuary-scaled.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.header h1{
+    color: white;
+    font-size: 55px;
+    text-align: center;
+    font-family: 'Alex Brush', cursive;
+    font-weight: lighter;
+}
+
+.classes{
+    height: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(252, 252, 252);
+    position: relative;
+    flex-direction: column;
+
+}
+
+.classes h1{
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    font-size: 30px;
+    font-weight: lighter;
+    
+    
+}
+
+.classtitle{
+    
+    margin: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    height: 300px;
+    width: 100vw;
+    transform: translateY(150px);
+}
+
+.classtitle:nth-child(3){
+    height: 200px;
+}
+
+.classtitle h2{
+    font-size: 25px;
+    padding: 10px;
+    background-color: #49546E;
+    color: white;
+    width: 350px;
+
+}
+
+.classtitle h3{
+    background-color: #49546E;
+    font-size: 20px;
+    text-align: left;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+}
+
+.classtitle h4{
+    transform: translateX(30px);
+    font-size: 23px;
+    text-align: left;
+    color: rgb(104, 104, 104);
+    
+    margin: 0;
+}
+
+.classtitle p{
+    margin-top: 10px;
+    width: 60%;
+    transform: translateX(30px);
+    font-size: 19px;
+    text-align: left;
+    color: rgb(104, 104, 104);
+    
+}
